@@ -5,7 +5,7 @@ https://github.com/kwotsin/dissertation/blob/master/eval/TTUR/fid.py
 import numpy as np
 from scipy import linalg
 
-from torch_mimicry.metrics.inception_model import inception_utils
+from torch_mimicry.metrics.inception_model import inception_utils as iu
 
 
 def calculate_frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
@@ -82,7 +82,7 @@ def calculate_activation_statistics(images, sess, batch_size=50, verbose=True):
         ndarray: Mean of inception features from samples.
         ndarray: Covariance of inception features from samples.
     """
-    act = inception_utils.get_activations(images, sess, batch_size, verbose)
+    act = iu.get_activations(images, sess, batch_size, verbose)
     mu = np.mean(act, axis=0)
     sigma = np.cov(act, rowvar=False)
 
