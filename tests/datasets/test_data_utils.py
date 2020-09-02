@@ -80,7 +80,7 @@ class TestDataUtils:
         with pytest.raises(ValueError):
             data_utils.load_dataset('random', 'wrong_dataset')
 
-    @pytest.mark.skipif(not os.path.exists('./datasets/celeba/celeba'),
+    @pytest.mark.skipif(not os.path.exists('./datasets/celeba_all/celeba_all'),
                         reason='Requires download.')
     def test_load_celeba_dataset(self):
         sizes = [64, 128]

@@ -157,7 +157,7 @@ def load_celeba_dataset(root,
     Returns:
         Dataset: Torch Dataset object.   
     """
-    dataset_dir = os.path.join(root, 'celeba')
+    dataset_dir = os.path.join(root, 'celeba_all')
     if not os.path.exists(dataset_dir):
         os.makedirs(dataset_dir)
 

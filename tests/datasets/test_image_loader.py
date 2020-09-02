@@ -130,7 +130,7 @@ class TestImageLoader:
         assert images.shape == (num_images, H, W, C)
         assert np.mean(images[0]) != np.mean(images[1])
 
-    @pytest.mark.skipif(not os.path.exists('./datasets/celeba/celeba'),
+    @pytest.mark.skipif(not os.path.exists('./datasets/celeba_all/celeba_all'),
                         reason='Requires download.')
     def test_get_celeba_images(self):
         num_images = 10
